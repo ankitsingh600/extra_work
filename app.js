@@ -36,10 +36,8 @@ app.get("/broker", async(req,res)=>{
         return response.data;
       } catch (error) {
         console.log(error.response.data)
-        // throw new Error("There is some problem in fetching data");
+        throw new Error("There is some problem in fetching data");
       }
-    // console.log(response.data)
-    res.send("hello world")
 })
 app.use("/user", user)
 
